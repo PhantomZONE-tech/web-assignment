@@ -1,0 +1,214 @@
+ /* General Styles */
+ body {
+     font-family: Arial, sans-serif;
+     margin: 0;
+     padding: 0;
+     background-color: #f0f8ff;
+     /* AliceBlue */
+     transition: background-color 0.5s;
+ }
+
+ /* Header */
+ header {
+     background-color: #d9ff00;
+     /* OrangeRed */
+     color: white;
+     padding: 1rem;
+     text-align: center;
+     position: sticky;
+     top: 0;
+     z-index: 1000;
+     animation: fadeIn 2s;
+ }
+
+ nav ul {
+     list-style-type: none;
+     padding: 0;
+     margin: 0;
+ }
+
+ nav ul li {
+     display: inline;
+     margin-right: 1rem;
+ }
+
+ nav ul li a {
+     color: rgb(66, 39, 39);
+     text-decoration: none;
+     font-weight: bold;
+ }
+
+ nav ul li a:hover {
+     text-decoration: underline;
+     animation: bounce 0.5s;
+ }
+
+ /* Sections */
+ section {
+     padding: 2rem;
+     text-align: center;
+ }
+
+ /* Home Section */
+ #home {
+     background: url('restaurant.jpg') no-repeat center center/cover;
+     color: rgb(158, 91, 91);
+     height: 100vh;
+     display: flex;
+     flex-direction: column;
+     justify-content: center;
+     animation: slideIn 2s;
+ }
+
+ #home h2 {
+     font-size: 3rem;
+ }
+
+ /* Menu Section */
+ #menu ul {
+     display: flex;
+     flex-wrap: wrap;
+     justify-content: center;
+ }
+
+ #menu ul li {
+     background-color: rgb(196, 169, 129);
+     /* BlanchedAlmond */
+     border: 1px solid #ff6347;
+     /* Tomato */
+     margin: 1rem;
+     padding: 1rem;
+     width: 200px;
+     transition: transform 0.3s;
+ }
+
+ #menu ul li:hover {
+     transform: scale(1.05);
+     animation: hoverShake 0.5s;
+ }
+
+ /* About Section */
+ #about {
+     background-color: #4682b4;
+     /* SteelBlue */
+     color: white;
+ }
+
+ #about p {
+     max-width: 600px;
+     margin: 0 auto;
+     animation: fadeInUp 2s;
+ }
+
+ /* Contact Section */
+ #contact form {
+     display: flex;
+     flex-direction: column;
+     align-items: center;
+ }
+
+ #contact label { 
+    display: block;
+    font-weight: bold;
+ }
+  
+
+ 
+ 
+ #contact button {
+     margin: 0.5rem 0;
+     width: 100%;
+     max-width: 400px;
+     animation: fadeInUp 2s;
+ }
+#contact input
+#contact textarea { 
+    padding: 0.5em;
+    border-radius: 15px;
+border-width: 2px;
+width: 100%;
+
+
+}
+ #contact button {
+     padding: 0.5em;
+     background-color: #ff4500
+     (--HIGHLIGHT-COLOR);
+
+     color: white;
+     border: none;
+     cursor: pointer;
+ }
+
+ #contact button:hover {
+     background-color: #ff6347;
+     /* Tomato */
+     animation: pulse 0.5s infinite alternate;
+ }
+
+ /* Keyframes for Animations */
+ @keyframes fadeIn {
+     from {
+         opacity: 0;
+     }
+
+     to {
+         opacity: 1;
+     }
+ }
+
+ @keyframes bounce {
+
+     0%,
+     100% {
+         transform: translateY(0);
+     }
+
+     50% {
+         transform: translateY(-10px);
+     }
+ }
+
+ @keyframes slideIn {
+     from {
+         transform: translateX(-100%);
+     }
+
+     to {
+         transform: translateX(0);
+     }
+ }
+
+ @keyframes hoverShake {
+
+     0%,
+     100% {
+         transform: translateX(0);
+     }
+
+     50% {
+         transform: translateX(10px);
+     }
+ }
+
+ @keyframes fadeInUp {
+     from {
+         opacity: 0;
+         transform: translateY(20px);
+     }
+
+     to {
+         opacity: 1;
+         transform: translateY(0);
+     }
+ }
+
+ @keyframes pulse {
+     from {
+         transform: scale(1);
+     }
+
+     to {
+         transform: scale(1.1);
+     }
+ }
